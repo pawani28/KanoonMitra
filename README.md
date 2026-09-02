@@ -177,16 +177,4 @@ The website works **100% out of the box** using the built-in Indian Legal Proced
 
 ---
 
-## 🏆 8. Hackathon Judges Demo Script
-
-1. **Step 1: Open Website** $\rightarrow$ Visit `http://localhost:3000`.
-2. **Step 2: Show Natural Prompt Drafting** $\rightarrow$ On Hero section, click the quick prompt chip *"🏠 2BHK Rent in Bengaluru"* $\rightarrow$ Click **AI Draft**.
-3. **Step 3: Demonstrate Dual-Pane & Saral Hindi** $\rightarrow$ Show the court draft on the right and switch to **Saral Plain View** (हिन्दी / English) to show how complex legalese is simplified for common citizens.
-4. **Step 4: Use AI Clause Refiner** $\rightarrow$ Select Clause 4 $\rightarrow$ Click *"Make Tenant-Friendly"* $\rightarrow$ Watch the clause update in real time.
-5. **Step 5: Run AI Red-Flag Audit** $\rightarrow$ Navigate to **"Red-Flag Audit"** tab $\rightarrow$ Click **"Load Risky Contract Sample"** $\rightarrow$ Click **"Run AI Audit"** $\rightarrow$ Show the **Fairness Score (35/100)** and Section 27 ICA violation detection.
-6. **Step 6: Show State Stamp Duty Calculator** $\rightarrow$ Navigate to **"Stamp Duty"** tab $\rightarrow$ Select *Maharashtra* $\rightarrow$ Show real-time duty & e-stamping portal link.
-7. **Step 7: Launch Pitch Deck** $\rightarrow$ Click the orange **"Hackathon Presentation"** button on the navbar to show the complete slide deck!
-
----
-
 **Crafted with ❤️ for Bharat 🇮🇳 | KanoonMitra Legal AI**
