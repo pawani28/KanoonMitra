@@ -1,0 +1,137 @@
+export const DOCUMENT_TEMPLATES = [
+  {
+    id: 'rent-agreement',
+    name: 'Residential Rent Agreement',
+    hindiName: 'मकान किरायानामा (Leave & License)',
+    category: 'Real Estate / Property',
+    popular: true,
+    badge: 'Most Popular in India',
+    description: 'Legally compliant 11-month or multi-year rental agreement between Landlord (Lessor) and Tenant (Lessee) with stamp duty guidelines.',
+    actReference: 'Transfer of Property Act, 1882 & State Rent Control Acts',
+    icon: 'Home',
+    fields: [
+      { id: 'landlordName', label: 'Landlord Full Name (मकान मालिक)', type: 'text', placeholder: 'e.g. Ramesh Chandra Sharma', default: 'Ramesh Chandra Sharma' },
+      { id: 'landlordAddress', label: 'Landlord Address & Aadhaar (Last 4)', type: 'text', placeholder: 'e.g. Flat 402, Shanti Heights, Malad West, Mumbai (XXXX-1234)', default: 'Flat 402, Shanti Heights, Malad West, Mumbai' },
+      { id: 'tenantName', label: 'Tenant Full Name (किरायेदार)', type: 'text', placeholder: 'e.g. Priya Sundaram', default: 'Priya Sundaram' },
+      { id: 'tenantAddress', label: 'Tenant Permanent Address', type: 'text', placeholder: 'e.g. H-12, Sector 62, Noida, Uttar Pradesh', default: 'H-12, Sector 62, Noida, Uttar Pradesh' },
+      { id: 'propertyAddress', label: 'Rented Property Address (किराये का पता)', type: 'text', placeholder: 'e.g. Flat No 301, 3rd Floor, Green Woods, Indiranagar, Bengaluru - 560038', default: 'Flat No 301, 3rd Floor, Green Woods, Indiranagar, Bengaluru - 560038' },
+      { id: 'monthlyRent', label: 'Monthly Rent (रुपये/माह)', type: 'number', placeholder: '25000', default: '25000' },
+      { id: 'securityDeposit', label: 'Security Deposit (सिक्योरिटी डिपॉजिट)', type: 'number', placeholder: '100000', default: '100000' },
+      { id: 'leaseTenure', label: 'Tenure (months)', type: 'select', options: ['11 Months', '22 Months', '36 Months'], default: '11 Months' },
+      { id: 'commenceDate', label: 'Commencement Date (शुरुआती तारीख)', type: 'date', default: '2026-09-15' },
+      { id: 'noticePeriod', label: 'Notice Period (नोटिस पीरियड)', type: 'select', options: ['1 Month', '2 Months', '15 Days'], default: '1 Month' },
+      { id: 'lockInPeriod', label: 'Lock-in Period (लॉक-इन अवधि)', type: 'select', options: ['None', '3 Months', '6 Months'], default: '3 Months' },
+      { id: 'petPolicy', label: 'Pets Allowed? (पालतू जानवर)', type: 'select', options: ['Permitted', 'Not Permitted', 'Permitted with prior consent'], default: 'Permitted with prior consent' },
+      { id: 'jurisdictionCity', label: 'Jurisdiction City (कोर्ट/विवाद अधिकार क्षेत्र)', type: 'text', placeholder: 'e.g. Bengaluru / Mumbai / Delhi', default: 'Bengaluru' },
+    ]
+  },
+  {
+    id: 'freelance-contract',
+    name: 'Freelancer / Service Contract',
+    hindiName: 'फ्रीलांसर / सेवा अनुबंध',
+    category: 'Business & Freelancing',
+    popular: true,
+    badge: 'Essential for Creators & MSMEs',
+    description: 'Professional service agreement protecting independent contractors & clients regarding deliverables, milestone payments, IP transfer, and late fees.',
+    actReference: 'Indian Contract Act, 1872 & Copyright Act, 1957',
+    icon: 'Briefcase',
+    fields: [
+      { id: 'clientName', label: 'Client / Company Name (ग्राहक)', type: 'text', placeholder: 'e.g. ZenTech Innovations Pvt. Ltd.', default: 'ZenTech Innovations Pvt. Ltd.' },
+      { id: 'clientRepresentative', label: 'Authorized Signatory', type: 'text', placeholder: 'e.g. Vikram Mehta, Director', default: 'Vikram Mehta, Director' },
+      { id: 'freelancerName', label: 'Freelancer / Agency Name (सेवा प्रदाता)', type: 'text', placeholder: 'e.g. Ananya Patel (Design Studio)', default: 'Ananya Patel' },
+      { id: 'scopeOfWork', label: 'Scope of Work / Deliverables (काम का विवरण)', type: 'textarea', placeholder: 'e.g. Full UI/UX Design for Mobile App, Design System in Figma, and 3 revision rounds.', default: 'Full UI/UX Design for Mobile Application, Design System in Figma, and up to 3 revision rounds.' },
+      { id: 'totalFee', label: 'Total Agreed Fee (₹ INR)', type: 'number', placeholder: '75000', default: '75000' },
+      { id: 'paymentTerms', label: 'Payment Schedule', type: 'select', options: ['50% Advance, 50% on Delivery', '30% Advance, 40% Milestone, 30% Final', '100% Post Completion within 15 days'], default: '50% Advance, 50% on Delivery' },
+      { id: 'deadlineDate', label: 'Delivery Deadline', type: 'date', default: '2026-10-31' },
+      { id: 'ipOwnership', label: 'IP Rights Transfer (बौद्धिक संपदा अधिकार)', type: 'select', options: ['Transfers to Client ONLY upon full payment', 'Retained by Freelancer with license to client', 'Transfers immediately upon creation'], default: 'Transfers to Client ONLY upon full payment' },
+      { id: 'revisionLimit', label: 'Included Revision Rounds', type: 'select', options: ['2 Rounds', '3 Rounds', 'Unlimited within scope'], default: '3 Rounds' },
+      { id: 'lateFeePercent', label: 'Late Payment Interest (% per month)', type: 'select', options: ['1.5% per month', '2% per month', 'None'], default: '1.5% per month' },
+      { id: 'jurisdictionCity', label: 'Jurisdiction City', type: 'text', default: 'Delhi' }
+    ]
+  },
+  {
+    id: 'nda-agreement',
+    name: 'Non-Disclosure Agreement (NDA)',
+    hindiName: 'गोपनीयता समझौता (NDA)',
+    category: 'Corporate & Startups',
+    popular: true,
+    badge: 'Confidentiality Shield',
+    description: 'Protects proprietary secrets, trade confidential data, client lists, and software code between startups, partners, and employees.',
+    actReference: 'Indian Contract Act, 1872 (Section 27 compliance)',
+    icon: 'ShieldCheck',
+    fields: [
+      { id: 'disclosingParty', label: 'Disclosing Party Name (डेटा देने वाला)', type: 'text', placeholder: 'e.g. Apex AI Labs LLP', default: 'Apex AI Labs LLP' },
+      { id: 'receivingParty', label: 'Receiving Party Name (डेटा पाने वाला)', type: 'text', placeholder: 'e.g. Suresh Varma / CloudScale Systems', default: 'Suresh Varma' },
+      { id: 'ndaType', label: 'NDA Type', type: 'select', options: ['Mutual (Two-way)', 'Unilateral (One-way)'], default: 'Mutual (Two-way)' },
+      { id: 'purpose', label: 'Purpose of Disclosure', type: 'textarea', placeholder: 'e.g. Exploring joint AI technology partnership and investment opportunities.', default: 'Exploring joint AI technology partnership, code evaluation, and business collaboration.' },
+      { id: 'confidentialityTerm', label: 'Confidentiality Duration', type: 'select', options: ['2 Years', '3 Years', '5 Years', 'Perpetual for Trade Secrets'], default: '3 Years' },
+      { id: 'nonSolicitation', label: 'Non-Solicitation of Employees', type: 'select', options: ['Included (12 Months)', 'Included (24 Months)', 'Excluded'], default: 'Included (12 Months)' },
+      { id: 'injunctiveRelief', label: 'Right to Court Injunction', type: 'select', options: ['Yes, Immediate Injunction Permitted', 'Arbitration Only'], default: 'Yes, Immediate Injunction Permitted' },
+      { id: 'jurisdictionCity', label: 'Governing Court Jurisdiction', type: 'text', default: 'Mumbai' }
+    ]
+  },
+  {
+    id: 'employment-contract',
+    name: 'Employment Offer & Agreement',
+    hindiName: 'रोजगार अनुबंध / नियुक्ति पत्र',
+    category: 'Human Resources',
+    popular: false,
+    badge: 'MSME HR Ready',
+    description: 'Comprehensive employment letter with probation terms, salary breakdown, IP assignment, notice period, and code of conduct.',
+    actReference: 'Industrial Disputes Act, 1947 & State Shops & Establishment Acts',
+    icon: 'UserCheck',
+    fields: [
+      { id: 'employerName', label: 'Company / Employer Name', type: 'text', default: 'Bharat NextGen Technologies Pvt. Ltd.' },
+      { id: 'employeeName', label: 'Candidate Full Name', type: 'text', default: 'Rohit K. Nair' },
+      { id: 'designation', label: 'Job Title / Designation', type: 'text', default: 'Senior Full Stack Developer' },
+      { id: 'annualCtc', label: 'Annual CTC (₹ INR)', type: 'number', default: '1200000' },
+      { id: 'probationPeriod', label: 'Probation Period', type: 'select', options: ['3 Months', '6 Months', 'None (Direct Permanent)'], default: '3 Months' },
+      { id: 'noticePeriodDays', label: 'Notice Period Duration', type: 'select', options: ['30 Days', '60 Days', '90 Days', '15 Days during probation'], default: '30 Days' },
+      { id: 'workMode', label: 'Work Mode', type: 'select', options: ['Hybrid (Office + Remote)', 'Fully Remote (Work from Anywhere)', 'On-site Office'], default: 'Hybrid (Office + Remote)' },
+      { id: 'joiningDate', label: 'Date of Joining', type: 'date', default: '2026-10-01' },
+      { id: 'jurisdictionCity', label: 'Jurisdiction City', type: 'text', default: 'Hyderabad' }
+    ]
+  },
+  {
+    id: 'promissory-note',
+    name: 'Promissory Note / Loan Agreement',
+    hindiName: 'प्रॉमिसरी नोट / ऋण समझौता (उधारनामा)',
+    category: 'Finance & Lending',
+    popular: false,
+    badge: 'Legally Recoverable Debt',
+    description: 'Written promise to repay borrowed money with clear interest rate, monthly EMI or lumpsum schedule, and default recovery terms.',
+    actReference: 'Negotiable Instruments Act, 1881 (Section 4)',
+    icon: 'Coins',
+    fields: [
+      { id: 'lenderName', label: 'Lender Full Name (ऋणदाता / पैसा देने वाला)', type: 'text', default: 'Gopal Krishna Agarwal' },
+      { id: 'borrowerName', label: 'Borrower Full Name (ऋणी / कर्जदार)', type: 'text', default: 'Manoj Kumar Gupta' },
+      { id: 'principalAmount', label: 'Principal Loan Amount (₹ INR)', type: 'number', default: '300000' },
+      { id: 'interestRate', label: 'Annual Interest Rate (%)', type: 'select', options: ['0% (Interest-free loan)', '6% per annum', '9% per annum', '12% per annum', '18% per annum'], default: '9% per annum' },
+      { id: 'repaymentType', label: 'Repayment Structure', type: 'select', options: ['Single Lumpsum with Interest', 'Monthly Equated Installments (EMIs)', 'Quarterly Payments'], default: 'Monthly Equated Installments (EMIs)' },
+      { id: 'dueDate', label: 'Final Repayment Due Date', type: 'date', default: '2027-03-31' },
+      { id: 'collateralSecurity', label: 'Collateral / Guarantee', type: 'text', placeholder: 'e.g. Unsecured / Undated Cheque No. 445102', default: 'Post-Dated Cheque as Security' },
+      { id: 'jurisdictionCity', label: 'City of Execution', type: 'text', default: 'Jaipur' }
+    ]
+  },
+  {
+    id: 'legal-notice',
+    name: 'Legal Notice for Unpaid Dues / Breach',
+    hindiName: 'कानूनी नोटिस (बकाया भुगतान / अनुबंध उल्लंघन)',
+    category: 'Litigation & Notice',
+    popular: false,
+    badge: 'Pre-Litigation Formal Notice',
+    description: 'Formal legal demand notice sent to an individual or company demanding payment of overdue invoice or rectifying contract breach within 15 days.',
+    actReference: 'Code of Civil Procedure, 1908 & Section 138 NI Act (where applicable)',
+    icon: 'AlertTriangle',
+    fields: [
+      { id: 'senderName', label: 'Aggrieved Party / Sender (भेजने वाला)', type: 'text', default: 'Apex Digital Solutions LLP' },
+      { id: 'recipientName', label: 'Defaulting Party / Recipient (पाने वाला)', type: 'text', default: 'Orbit Retailers Pvt. Ltd.' },
+      { id: 'recipientAddress', label: 'Recipient Registered Address', type: 'text', default: 'Plot 44, Okhla Industrial Area Phase 3, New Delhi' },
+      { id: 'outstandingAmount', label: 'Overdue Amount (₹ INR)', type: 'number', default: '185000' },
+      { id: 'invoiceDetails', label: 'Invoice No. & Date Reference', type: 'text', default: 'Invoice #ADS/2026/089 dated 10th June 2026' },
+      { id: 'rectificationWindow', label: 'Cure / Payment Demand Period', type: 'select', options: ['15 Days from receipt', '7 Days from receipt', '30 Days from receipt'], default: '15 Days from receipt' },
+      { id: 'interestClaimed', label: 'Interest Claimed on Overdue Dues', type: 'select', options: ['18% per annum from due date', '24% per annum under MSMED Act, 2006', 'No interest claimed'], default: '18% per annum from due date' },
+      { id: 'jurisdictionCity', label: 'City of Advocate/Sender', type: 'text', default: 'New Delhi' }
+    ]
+  }
+];
