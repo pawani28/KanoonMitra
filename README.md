@@ -18,8 +18,7 @@ In India, over **90% of individuals and 6.3 crore MSMEs** enter agreements witho
 2. **AI Risk & Red-Flag Audit**: Analyzes any contract to detect predatory terms (e.g. void non-competes under Section 27 ICA 1872, unilateral termination, uncapped indemnities) and awards a **Fairness Score (0-100)**.
 3. **State-Wise Indian Stamp Duty Calculator**: Calculates real-time e-Stamping requirements for Maharashtra (GRAS), Delhi (SHCIL), Karnataka (Kaveri 2.0), UP (IGRSUP), and Tamil Nadu.
 4. **Lawyer Escalation Portal**: Connects users to Bar Council of India verified advocates for complex review.
-5. **In-App Pitch Deck Presentation**: Live interactive presentation slides embedded directly in the website for hackathon judges!
-
+5. 
 ---
 
 ## 🏛️ 2. Full-Stack System Architecture
@@ -149,9 +148,6 @@ The website works **100% out of the box** using the built-in Indian Legal Proced
 
 ### 5. Bar Council Verified Advocate Connect
 - 1-click consultation booking with verified advocates for complex legal escalation.
-
-### 6. Hackathon Presentation Slide Deck
-- Click **"Hackathon Presentation"** in the navbar to open an interactive presentation deck explaining Architecture, Impact, and Ethics directly to judges.
 
 ---
 
