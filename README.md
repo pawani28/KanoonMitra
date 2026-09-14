@@ -18,7 +18,6 @@ In India, over **90% of individuals and 6.3 crore MSMEs** enter agreements witho
 2. **AI Risk & Red-Flag Audit**: Analyzes any contract to detect predatory terms (e.g. void non-competes under Section 27 ICA 1872, unilateral termination, uncapped indemnities) and awards a **Fairness Score (0-100)**.
 3. **State-Wise Indian Stamp Duty Calculator**: Calculates real-time e-Stamping requirements for Maharashtra (GRAS), Delhi (SHCIL), Karnataka (Kaveri 2.0), UP (IGRSUP), and Tamil Nadu.
 4. **Lawyer Escalation Portal**: Connects users to Bar Council of India verified advocates for complex review.
-5. 
 ---
 
 ## 🏛️ 2. Full-Stack System Architecture
