@@ -9,7 +9,7 @@
 
 ---
 
-## 📖 1. Project Overview & Hackathon Objective
+## 📖 1. Project Overview
 
 In India, over **90% of individuals and 6.3 crore MSMEs** enter agreements without formal written contracts due to prohibitive legal fees, intimidation by complex legal jargon (*Legalese*), and lack of awareness about state stamp duty laws.
 
