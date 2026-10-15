@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KanoonMitra (कानून मित्र) - AI Legal Documentation & Risk Auditing Platform</title>
+  <meta name="description" content="AI-Powered Indian Legal Documentation Assistant for Individuals, Freelancers, and MSMEs. Dual-pane court enforceable contracts and Saral Hindi translation.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+
+  <!-- Google Fonts: Inter, Merriweather, Noto Sans Devanagari, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Master Stylesheet (Zero Vite / Vanilla CSS) -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. GLOBAL NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="nav-container">
+      
+      <!-- Brand Logo -->
+      <a id="brand-link" class="brand-wrapper" href="#templates">
+        <div class="brand-logo-icon">⚖️</div>
+        <div class="brand-title-group">
+          <div class="brand-title">
+            KanoonMitra <span class="brand-badge">Bharat 🇮🇳</span>
+          </div>
+          <div class="brand-subtitle hindi-text">कानून मित्र • AI विधिक सहायक</div>
+        </div>
+      </a>
+
+      <!-- Primary Navigation Tabs -->
+      <nav class="nav-links">
+        <button class="nav-item active" data-tab="templates">
+          <span>📋</span> <span>Templates (दस्तावेज)</span>
+        </button>
+        <button class="nav-item" data-tab="studio">
+          <span>✍️</span> <span>Dual Studio (एडिटर)</span>
+        </button>
+        <button class="nav-item" data-tab="audit">
+          <span>🛡️</span> <span>Risk Audit (जांच)</span>
+        </button>
+        <button class="nav-item" data-tab="stamp">
+          <span>🏛️</span> <span>Stamp Duty (स्टाम्प)</span>
+        </button>
+        <button class="nav-item" data-tab="laws">
+          <span>📖</span> <span>Legal Acts (कानून)</span>
+        </button>
+      </nav>
+
+      <!-- Nav Actions (Pitch Deck & User Auth) -->
+      <div class="nav-actions">
+        <!-- Hackathon Pitch Presentation Button -->
+        <button id="header-pitch-btn" class="btn-header-pitch">
+          <span>🎯</span> <span>Pitch Deck</span>
+        </button>
+
+        <!-- Logged Out: Sign In Button -->
+        <button id="auth-nav-btn" class="auth-nav-btn">
+          <span>👤</span> <span>Sign In / Login</span>
+        </button>
+
+        <!-- Logged In: User Profile Menu -->
+        <div id="user-profile-menu" class="user-profile-menu" style="display: none;">
+          <button id="user-pill-btn" class="user-pill-btn">
+            <div id="user-avatar-circle" class="user-avatar-circle">P</div>
+            <div class="user-info-text">
+              <span id="user-name-label" class="user-name-label">User</span>
+              <span id="user-role-badge" class="user-role-badge">Citizen</span>
+            </div>
+            <span style="font-size: 0.7rem; color: #94a3b8; margin-left: 2px;">▼</span>
+          </button>
+
+          <!-- Dropdown Popup -->
+          <div id="profile-dropdown" class="profile-dropdown-menu">
+            <div class="dropdown-header-card">
+              <div id="dropdown-user-name" class="dropdown-user-fullname">Pawan Kumar</div>
+              <div id="dropdown-user-email" class="dropdown-user-email">user@kanoonmitra.in</div>
+            </div>
+            <a id="dropdown-profile-btn" class="dropdown-link-item">
+              <span>👤</span> <span>My Profile & Documents</span>
+            </a>
+            <a id="dropdown-new-draft-btn" class="dropdown-link-item">
+              <span>✍️</span> <span>Draft New Agreement</span>
+            </a>
+            <a id="dropdown-logout-btn" class="dropdown-link-item logout">
+              <span>🚪</span> <span>Sign Out (लॉग आउट)</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. MAIN CONTENT AREA
+       ========================================================================= -->
+  <main class="main-wrapper">
+
+    <!-- ---------------------------------------------------------------------
+         TAB 1: TEMPLATE CATALOG & HERO SECTION (#templates-view)
+         --------------------------------------------------------------------- -->
+    <section id="templates-view" class="tab-view active">
+      
+      <!-- Catchy Hero Banner -->
+      <div class="hero-card">
+        <div class="hero-content">
+          <div class="hero-pill">
+            <span>✨</span> <span>Indian Contract Act 1872 & DPDP Act 2023 Aligned</span>
+          </div>
+          <h1 class="hero-title">
+            Legally Binding Indian Contracts with <span>Saral Hindi & Plain English</span>
+          </h1>
+          <p class="hero-description">
+            Over 90% of Indians sign agreements without understanding the fine print. KanoonMitra drafts court-enforceable Indian legal agreements side-by-side with 5th-grade summaries, audits predatory terms, and calculates state stamp duty.
+          </p>
+
+          <!-- AI Natural Language Prompt Intake -->
+          <form id="hero-prompt-form" class="hero-prompt-bar">
+            <input 
+              type="text" 
+              id="hero-prompt-input" 
+              class="hero-prompt-input" 
+              placeholder="e.g. Draft an 11-month rent agreement for 2BHK flat in Indiranagar Bengaluru at ₹28,000/mo..."
+              required
+            >
+            <button type="submit" class="hero-prompt-btn">
+              <span>Draft with AI</span> <span>⚡</span>
+            </button>
+          </form>
+
+          <!-- Key Metrics -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-value">6.3 Cr+</span>
+              <span class="stat-label">MSMEs Protected</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">100%</span>
+              <span class="stat-label">Court Valid Formats</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">5 States</span>
+              <span class="stat-label">Instant e-Stamping Calculators</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">Zero</span>
+              <span class="stat-label">Hidden Legalese</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Catalog Header & Filter -->
+      <div class="catalog-section-header">
+        <div>
+          <h2 class="catalog-title">Verified Indian Legal Agreement Templates</h2>
+          <p class="catalog-subtitle">Pre-configured with statutory protections under Indian Law. Select a template to begin drafting.</p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="category-filter-pills">
+          <button class="filter-pill active" data-category="all">All Templates</button>
+          <button class="filter-pill" data-category="Property">Property & Rent</button>
+          <button class="filter-pill" data-category="Business">Business & Freelancing</button>
+          <button class="filter-pill" data-category="Corporate">Corporate & Startups</button>
+          <button class="filter-pill" data-category="Finance">Finance & Loans</button>
+        </div>
+      </div>
+
+      <!-- Dynamic Templates Grid -->
+      <div id="templates-grid" class="templates-grid">
+        <!-- Injected via templates.js -->
+      </div>
+
+    </section>
+
+    <!-- ---------------------------------------------------------------------
+         TAB 2: INTAKE WIZARD (#wizard-view)
+         --------------------------------------------------------------------- -->
+    <section id="wizard-view" class="tab-view">
+      <div class="wizard-wrapper">
+        <div class="wizard-header">
+          <div>
+            <h2 id="wizard-tmpl-title" class="wizard-template-title">Agreement Intake Wizard</h2>
+            <p id="wizard-tmpl-sub" class="wizard-template-sub">Fill in the necessary party details and commercial covenants.</p>
+          </div>
+          <button id="wizard-back-btn" class="btn-doc-action" style="background: rgba(255,255,255,0.15); color:white; border-color:rgba(255,255,255,0.3);">
+            ← Back to Templates
+          </button>
+        </div>
+
+        <form id="wizard-form">
+          <div class="wizard-body">
+            <div id="wizard-dynamic-fields" class="wizard-fields-grid">
+              <!-- Dynamically populated from template schema -->
+            </div>
+          </div>
+
+          <div class="wizard-footer">
+            <div style="font-size:0.75rem; color:#64748b;">
+              🔒 <strong>DPDP Act 2023:</strong> Information is processed confidentially.
+            </div>
+            <button type="submit" id="wizard-generate-btn" class="auth-submit-btn" style="width:auto; padding:0.65rem 1.75rem; margin:0;">
+              <span>Generate Court & Saral Draft →</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------------
+         TAB 3: DUAL-PANE DOCUMENT STUDIO (#studio-view)
+         --------------------------------------------------------------------- -->
+    <section id="studio-view" class="tab-view">
+      
+      <!-- Studio Control Bar -->
+      <div class="studio-toolbar">
+        <div class="studio-title-area">
+          <span id="studio-doc-badge" class="studio-doc-badge">KM-IN-2026-DOC</span>
+          <h2 id="studio-doc-title" class="studio-doc-name">Residential Leave and License Agreement</h2>
+        </div>
+
+        <div class="studio-buttons-group">
+          <button id="studio-save-btn" class="btn-profile-primary">
+            <span>💾</span> <span>Save to My Account</span>
+          </button>
+          <button id="studio-print-btn" class="btn-profile-outline">
+            <span>🖨️</span> <span>Print Court Paper (A4)</span>
+          </button>
+          <button id="studio-download-btn" class="btn-profile-outline">
+            <span>⬇️</span> <span>Download (.txt)</span>
+          </button>
+          <button id="studio-audit-btn" class="btn-profile-outline" style="border-color:#fca5a5; color:#991b1b; background:#fff5f5;">
+            <span>🛡️</span> <span>Audit Red Flags</span>
+          </button>
+          <button id="studio-lawyer-btn" class="btn-profile-outline" style="border-color:#fed7aa; color:#9a3412; background:#fff7ed;">
+            <span>⚖️</span> <span>Lawyer Review</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Split Screen Grid -->
+      <div class="studio-pane-grid">
+        
+        <!-- Left Pane: Court Enforceable Draft -->
+        <div class="court-paper-pane">
+          <div class="court-watermark">KanoonMitra Verified</div>
+          <div id="court-document-content">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Right Pane: Saral Explainer (Saral Hindi + English) -->
+        <div class="saral-explainer-pane">
+          <div id="saral-explainer-content">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ---------------------------------------------------------------------
+         TAB 4: AI RISK & RED-FLAG ANALYZER (#audit-view)
+         --------------------------------------------------------------------- -->
+    <section id="audit-view" class="tab-view">
+      <div class="audit-wrapper">
+        
+        <div style="margin-bottom: 1.5rem; text-align:center;">
+          <h2 style="font-size:1.8rem; font-weight:800; color:#0f172a;">AI Contract Risk & Red-Flag Auditor</h2>
+          <p style="color:#64748b; font-size:0.9rem; max-width:650px; margin:0.35rem auto 0 auto;">
+            Paste any third-party contract or agreement to detect predatory terms, void non-compete clauses under Section 27 ICA, unilateral cancellations, and missing statutory interest.
+          </p>
+        </div>
+
+        <!-- Audit Score Overview Banner -->
+        <div class="audit-score-card">
+          <div style="display:flex; align-items:center; gap:1.5rem;">
+            <div class="fairness-score-circle">
+              <span id="audit-score-num" class="score-num">88</span>
+              <span class="score-total">/ 100</span>
+            </div>
+            <div>
+              <div style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:#64748b;">Contract Health Rating</div>
+              <h3 id="audit-risk-rating" style="font-size:1.45rem; font-weight:800; color:#0f172a;">Low Risk (Fair)</h3>
+              <p id="audit-hindi-summary" class="hindi-text" style="font-size:0.85rem; color:#047857; margin-top:4px;">
+                अनुबंध की शर्तें कानूनी रूप से संतुलित हैं और इसमें कोई बड़ा जोखिम नहीं है।
+              </p>
+            </div>
+          </div>
+
+          <div style="font-size:0.8rem; color:#475569; max-width:280px; background:#f8fafc; padding:0.85rem; border-radius:var(--radius-md); border:1px solid var(--border);">
+            <strong>Statutes Cross-Referenced:</strong><br>
+            • Section 27 Indian Contract Act 1872<br>
+            • Section 16 MSMED Act 2006 (45-Day Rule)<br>
+            • Specific Relief Act 1963
+          </div>
+        </div>
+
+        <!-- Contract Input Form -->
+        <div class="profile-section-card">
+          <form id="audit-form">
+            <div class="form-group">
+              <label class="form-label" for="audit-contract-text">Paste Contract Text / Clauses to Audit:</label>
+              <textarea 
+                id="audit-contract-text" 
+                class="form-input" 
+                rows="6" 
+                placeholder="Paste any agreement clauses here. For example: 'The Company reserves the right to terminate immediately without cause. Employee shall not engage in any competing business for 2 years anywhere in India...'"
+                required
+              >1. The Client may terminate this agreement at its sole discretion without any notice or cause.
+2. The Service Provider shall unconditionally indemnify and hold harmless the Client against all indirect and consequential losses without limitation.
+3. Post termination, the Service Provider shall not engage in any competing business for a period of 2 years across India.</textarea>
+            </div>
+            <button type="submit" class="auth-submit-btn" style="width:auto; padding:0.65rem 1.75rem;">
+              <span>Scan Contract for Red Flags 🔍</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Detected Red Flags & Missing Protections -->
+        <div class="profile-section-card">
+          <div class="section-card-header">
+            <div class="section-title-wrap">
+              <h3 class="section-main-heading">Detected Red Flags & Predatory Terms</h3>
+              <span class="section-sub-heading">Clauses identified as potentially disadvantageous or void under Indian Law</span>
+            </div>
+          </div>
+          <div id="audit-redflags-list">
+            <!-- Dynamically populated -->
+          </div>
+
+          <div style="margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid var(--border);">
+            <h4 style="font-size:0.95rem; font-weight:800; margin-bottom:0.65rem;">Recommended Missing Protections:</h4>
+            <ul id="audit-missing-list" style="list-style:none;">
+              <!-- Dynamically populated -->
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------------
+         TAB 5: STATE STAMP DUTY CALCULATOR (#stamp-view)
+         --------------------------------------------------------------------- -->
+    <section id="stamp-view" class="tab-view">
+      <div class="stamp-calculator-card">
+        <div style="margin-bottom:1.5rem;">
+          <h2 style="font-size:1.75rem; font-weight:800; color:#0f172a;">Indian State Stamp Duty & e-Stamping Portal</h2>
+          <p style="color:#64748b; font-size:0.88rem; margin-top:0.25rem;">
+            Calculate real-time stamp duty and registration fees for Leave & License, NDAs, and Service agreements across major Indian states.
+          </p>
+        </div>
+
+        <!-- State Selector Tabs -->
+        <div id="stamp-state-tabs" class="state-selector-tabs">
+          <!-- Injected via app.js -->
+        </div>
+
+        <!-- Calculator Inputs -->
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; margin-bottom:1.5rem;">
+          <div class="form-group">
+            <label class="form-label" for="calc-rent">Monthly Rent / Consideration (₹ INR):</label>
+            <input type="number" id="calc-rent" class="form-input" value="25000">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="calc-deposit">Refundable Security Deposit (₹ INR):</label>
+            <input type="number" id="calc-deposit" class="form-input" value="100000">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="calc-tenure">Lease Tenure (Months):</label>
+            <input type="number" id="calc-tenure" class="form-input" value="11">
+          </div>
+        </div>
+
+        <!-- Calculation Output Box -->
+        <div class="stamp-result-box">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+            <div>
+              <span style="font-size:0.74rem; font-weight:700; text-transform:uppercase; color:#64748b;">Selected Jurisdiction:</span>
+              <h3 id="stamp-selected-state-name" style="font-size:1.25rem; font-weight:800; color:#0f172a;">Maharashtra</h3>
+            </div>
+            <a id="stamp-portal-link" href="#" target="_blank" class="btn-profile-primary" style="font-size:0.8rem; padding:0.45rem 0.95rem;">
+              Open Official Portal ↗
+            </a>
+          </div>
+
+          <div class="stamp-rate-display">
+            <div class="stamp-rate-card">
+              <span style="font-size:0.75rem; color:#64748b; font-weight:600;">Stamp Duty Payable</span>
+              <div id="calc-res-stamp" style="font-size:1.5rem; font-weight:800; color:#1e3a8a; margin-top:2px;">₹800</div>
+              <span style="font-size:0.7rem; color:#64748b;">Non-Judicial e-Stamp</span>
+            </div>
+            <div class="stamp-rate-card">
+              <span style="font-size:0.75rem; color:#64748b; font-weight:600;">Government Registration Fee</span>
+              <div id="calc-res-reg" style="font-size:1.5rem; font-weight:800; color:#0f172a; margin-top:2px;">₹1,000</div>
+              <span style="font-size:0.7rem; color:#64748b;">Sub-Registrar / Online e-ASR</span>
+            </div>
+            <div class="stamp-rate-card" style="background:#eff6ff; border-color:#bfdbfe;">
+              <span style="font-size:0.75rem; color:#1e40af; font-weight:700;">Total Estimated Cost</span>
+              <div id="calc-res-total" style="font-size:1.5rem; font-weight:900; color:#1e3a8a; margin-top:2px;">₹1,800</div>
+              <span style="font-size:0.7rem; color:#2563eb;">Legally Enforceable Total</span>
+            </div>
+          </div>
+
+          <div id="stamp-statutory-tip" style="font-size:0.78rem; color:#475569; background:white; padding:0.75rem 1rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
+            <!-- Tip text -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------------
+         TAB 6: INDIAN ACTS GUIDE (#laws-view)
+         --------------------------------------------------------------------- -->
+    <section id="laws-view" class="tab-view">
+      <div style="max-width:980px; margin:0 auto;">
+        <div style="margin-bottom:1.5rem; text-align:center;">
+          <h2 style="font-size:1.8rem; font-weight:800; color:#0f172a;">Indian Legal Statutes Reference Guide</h2>
+          <p style="color:#64748b; font-size:0.9rem; max-width:620px; margin:0.35rem auto 0 auto;">
+            The key acts of Indian Parliament governing personal, rental, and commercial contracts in Bharat.
+          </p>
+        </div>
+
+        <div id="acts-guide-container">
+          <!-- Injected via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------------
+         TAB 7: USER AUTHENTICATION & LOGIN PAGE (#login-view)
+         --------------------------------------------------------------------- -->
+    <section id="login-view" class="tab-view">
+      <div class="auth-page-wrapper">
+        <div class="auth-card-container">
+          
+          <!-- Left Branding Sidebar -->
+          <div class="auth-branding-sidebar">
+            <div>
+              <div class="auth-brand-logo">
+                <div class="brand-logo-icon">⚖️</div>
+                <div>
+                  <h3 style="font-size:1.25rem; font-weight:800; color:white;">KanoonMitra</h3>
+                  <div style="font-size:0.75rem; color:#fde68a;">कानून मित्र • AI Legal Bharat</div>
+                </div>
+              </div>
+
+              <h4 style="font-size:1.15rem; font-weight:800; margin-bottom:0.5rem; color:#ffffff;">
+                Your Personal AI Legal Shield
+              </h4>
+              <p style="font-size:0.82rem; color:#cbd5e1; line-height:1.5;">
+                Access court-enforceable Indian legal agreements, track your drafted documents, and consult verified Bar Council advocates anytime.
+              </p>
+
+              <ul class="auth-features-list">
+                <li class="auth-feature-item">
+                  <div class="auth-feature-icon">✓</div>
+                  <div>
+                    <div class="auth-feature-title">Dual-Pane Plain Language Drafting</div>
+                    <div class="auth-feature-sub">Legalese alongside Saral Hindi and 5th-grade plain English.</div>
+                  </div>
+                </li>
+                <li class="auth-feature-item">
+                  <div class="auth-feature-icon">🛡️</div>
+                  <div>
+                    <div class="auth-feature-title">AI Red-Flag Auditing</div>
+                    <div class="auth-feature-sub">Catches unfair clauses and Section 27 non-competes before signing.</div>
+                  </div>
+                </li>
+                <li class="auth-feature-item">
+                  <div class="auth-feature-icon">🏛️</div>
+                  <div>
+                    <div class="auth-feature-title">Real-Time State Stamp Duty</div>
+                    <div class="auth-feature-sub">Calculates e-stamping across Maharashtra, Delhi, Karnataka & UP.</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="auth-statute-badge">
+              🔒 <strong>DPDP Act 2023 Compliant:</strong> Zero central storage of confidential financial details. All agreements are hashed and encrypted.
+            </div>
+          </div>
+
+          <!-- Right Column: Login & Sign Up Forms -->
+          <div class="auth-form-column">
+            
+            <!-- Auth Segmented Switch -->
+            <div class="auth-tab-switch">
+              <button id="auth-login-tab-btn" class="auth-tab-btn active">
+                Sign In (लॉग इन)
+              </button>
+              <button id="auth-register-tab-btn" class="auth-tab-btn">
+                Create Account (खाता बनाएं)
+              </button>
+            </div>
+
+            <!-- Header Text -->
+            <h2 id="auth-title" class="auth-header-title">Welcome Back (पुनः स्वागत है)</h2>
+            <p id="auth-sub" class="auth-header-sub">Sign in to access your drafted Indian legal contracts & dashboard.</p>
+
+            <!-- 1. SIGN IN FORM -->
+            <div id="login-form-wrap">
+              <form id="login-form">
+                
+                <div class="form-group">
+                  <label class="form-label" for="login-email">Email or Phone Number</label>
+                  <div class="input-with-icon">
+                    <span class="input-icon-prefix">✉️</span>
+                    <input 
+                      type="text" 
+                      id="login-email" 
+                      class="form-input has-prefix" 
+                      placeholder="e.g. pawan@kanoonmitra.in or 9876543210" 
+                      value="pawan@kanoonmitra.in"
+                      required
+                    >
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="login-password">Password (पासवर्ड)</label>
+                  <div class="input-with-icon">
+                    <span class="input-icon-prefix">🔒</span>
+                    <input 
+                      type="password" 
+                      id="login-password" 
+                      class="form-input has-prefix" 
+                      placeholder="Enter your account password" 
+                      value="password123"
+                      required
+                    >
+                    <button type="button" class="password-toggle-btn" data-target="login-password">👁️</button>
+                  </div>
+                </div>
+
+                <div class="form-options-row">
+                  <label class="checkbox-label">
+                    <input type="checkbox" checked>
+                    <span>Remember me on this browser</span>
+                  </label>
+                  <a href="#" class="link-forgot" onclick="alert('Demo reset instructions sent to your email.'); return false;">Forgot?</a>
+                </div>
+
+                <button type="submit" class="auth-submit-btn">
+                  <span>Sign In to KanoonMitra →</span>
+                </button>
+              </form>
+
+              <!-- Quick 1-Click Demo Login Shortcuts -->
+              <div class="demo-logins-box">
+                <div class="demo-logins-title">
+                  <span>⚡</span> <span>1-Click Quick Demo Evaluation Logins:</span>
+                </div>
+                <div class="demo-buttons-flex">
+                  <button class="demo-user-chip" data-demo-role="citizen">
+                    <span>👤</span> <span>Citizen (Pawan Kumar)</span>
+                  </button>
+                  <button class="demo-user-chip" data-demo-role="freelancer">
+                    <span>💻</span> <span>Freelancer (Ananya Patel)</span>
+                  </button>
+                  <button class="demo-user-chip" data-demo-role="msme">
+                    <span>🏢</span> <span>MSME Founder (Vikram Mehta)</span>
+                  </button>
+                  <button class="demo-user-chip" data-demo-role="lawyer">
+                    <span>⚖️</span> <span>Advocate (Rajesh Sharma)</span>
+                  </button>
+                </div>
+              </div>
+
+              <div style="text-align:center; margin-top:1.25rem; font-size:0.82rem; color:#64748b;">
+                Don't have an account yet? <a href="#" id="switch-to-register" style="color:var(--primary); font-weight:700;">Create one for free</a>
+              </div>
+            </div>
+
+            <!-- 2. REGISTRATION FORM -->
+            <div id="register-form-wrap" style="display:none;">
+              <form id="register-form">
+                
+                <!-- Role Selector Grid -->
+                <span class="role-selector-label">Select Your Primary Persona / Role:</span>
+                <div class="role-selector-grid">
+                  
+                  <div class="role-option-card selected" data-role="citizen">
+                    <div class="role-option-header">
+                      <span>👤</span> <span>Citizen (नागरिक)</span>
+                    </div>
+                    <span class="role-option-desc">Tenants, Landlords, Personal Affidavits</span>
+                  </div>
+
+                  <div class="role-option-card" data-role="freelancer">
+                    <div class="role-option-header">
+                      <span>💻</span> <span>Freelancer (फ्रीलांसर)</span>
+                    </div>
+                    <span class="role-option-desc">Creators, Tech, Design, Milestone IP</span>
+                  </div>
+
+                  <div class="role-option-card" data-role="msme">
+                    <div class="role-option-header">
+                      <span>🏢</span> <span>MSME Owner (उद्यमी)</span>
+                    </div>
+                    <span class="role-option-desc">Sec 16 MSMED, Vendor Contracts</span>
+                  </div>
+
+                  <div class="role-option-card" data-role="lawyer">
+                    <div class="role-option-header">
+                      <span>⚖️</span> <span>Advocate (वकील)</span>
+                    </div>
+                    <span class="role-option-desc">Bar Council Registered Lawyer</span>
+                  </div>
+
+                </div>
+
+                <!-- Input Fields -->
+                <div class="form-group">
+                  <label class="form-label" for="reg-name">Full Name (पूरा नाम)</label>
+                  <div class="input-with-icon">
+                    <span class="input-icon-prefix">👤</span>
+                    <input type="text" id="reg-name" class="form-input has-prefix" placeholder="e.g. Ramesh Chandra Sharma" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="reg-email">Email Address</label>
+                  <div class="input-with-icon">
+                    <span class="input-icon-prefix">✉️</span>
+                    <input type="email" id="reg-email" class="form-input has-prefix" placeholder="name@domain.in" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="reg-phone">Mobile Number (+91 WhatsApp/SMS)</label>
+                  <div class="input-with-icon">
+                    <span class="input-icon-prefix">📱</span>
+                    <input type="tel" id="reg-phone" class="form-input has-prefix" placeholder="+91 98765 43210" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="reg-city">City & State (Jurisdiction)</label>
+                  <div class="input-with-icon">
+                    <span class="input-icon-prefix">📍</span>
+                    <input type="text" id="reg-city" class="form-input has-prefix" placeholder="e.g. Bengaluru, Karnataka" value="Bengaluru, Karnataka">
+                  </div>
+                </div>
+
+                <!-- Conditional Lawyer Field -->
+                <div id="reg-lawyer-fields" class="form-group" style="display:none;">
+                  <label class="form-label" for="reg-bar-council">Bar Council of India Enrollment Number</label>
+                  <input type="text" id="reg-bar-council" class="form-input" placeholder="e.g. KAR/1234/2018">
+                </div>
+
+                <!-- Conditional MSME Field -->
+                <div id="reg-msme-fields" class="form-group" style="display:none;">
+                  <label class="form-label" for="reg-organization">Enterprise / Company Name</label>
+                  <input type="text" id="reg-organization" class="form-input" placeholder="e.g. ZenTech Innovations Pvt. Ltd.">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="reg-password">Create Password (पासवर्ड)</label>
+                  <div class="input-with-icon">
+                    <span class="input-icon-prefix">🔒</span>
+                    <input type="password" id="reg-password" class="form-input has-prefix" placeholder="Min. 6 characters" required>
+                    <button type="button" class="password-toggle-btn" data-target="reg-password">👁️</button>
+                  </div>
+                </div>
+
+                <div class="form-options-row">
+                  <label class="checkbox-label">
+                    <input type="checkbox" id="reg-consent" checked required>
+                    <span style="font-size:0.75rem;">I agree to the Terms of Service & DPDP Act 2023 data compliance policies.</span>
+                  </label>
+                </div>
+
+                <button type="submit" class="auth-submit-btn">
+                  <span>Create Verified Legal Account →</span>
+                </button>
+              </form>
+
+              <div style="text-align:center; margin-top:1.25rem; font-size:0.82rem; color:#64748b;">
+                Already have an account? <a href="#" id="switch-to-login" style="color:var(--primary); font-weight:700;">Sign in here</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------------
+         TAB 8: USER PROFILE & LEGAL DOCUMENTS DASHBOARD (#profile-view)
+         --------------------------------------------------------------------- -->
+    <section id="profile-view" class="tab-view">
+      <div class="profile-dashboard-wrapper">
+        
+        <!-- Profile Hero Banner -->
+        <div class="profile-hero-card">
+          <div class="profile-main-details">
+            <div id="profile-avatar-large" class="profile-avatar-large">P</div>
+            <div class="profile-name-group">
+              <h2 id="profile-full-name" class="profile-name-title">
+                Pawan Kumar <span class="verified-badge">✓ Verified Legal User</span>
+              </h2>
+              <div class="profile-meta-row">
+                <span class="profile-meta-item">🏷️ <strong id="profile-role-badge">Citizen / Tenant</strong></span>
+                <span class="profile-meta-item">✉️ <span id="profile-email-disp">pawan@kanoonmitra.in</span></span>
+                <span class="profile-meta-item">📱 <span id="profile-phone-disp">+91 98765 43210</span></span>
+                <span class="profile-meta-item">📍 <span id="profile-city-disp">Bengaluru, Karnataka</span></span>
+                <span class="profile-meta-item">📅 <span id="profile-member-since">Member since 2026</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-actions-group">
+            <button id="profile-new-draft-btn" class="btn-profile-primary">
+              <span>✍️</span> <span>Draft New Agreement</span>
+            </button>
+            <button id="profile-logout-btn" class="btn-profile-outline">
+              <span>🚪</span> <span>Sign Out</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Metric Stats Grid -->
+        <div class="user-stats-grid">
+          <div class="user-stat-card">
+            <div class="user-stat-icon blue">📄</div>
+            <div>
+              <div id="stat-docs-count" class="user-stat-num">0</div>
+              <div class="user-stat-desc">Contracts Drafted</div>
+            </div>
+          </div>
+
+          <div class="user-stat-card">
+            <div class="user-stat-icon amber">🛡️</div>
+            <div>
+              <div id="stat-audits-count" class="user-stat-num">1</div>
+              <div class="user-stat-desc">Risk Audits Run</div>
+            </div>
+          </div>
+
+          <div class="user-stat-card">
+            <div class="user-stat-icon green">⚖️</div>
+            <div>
+              <div id="stat-consults-count" class="user-stat-num">0</div>
+              <div class="user-stat-desc">Advocate Consults</div>
+            </div>
+          </div>
+
+          <div class="user-stat-card">
+            <div class="user-stat-icon purple">🏛️</div>
+            <div>
+              <div class="user-stat-num">100%</div>
+              <div class="user-stat-desc">Court Compliance</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Saved Documents Table Section -->
+        <div class="profile-section-card">
+          <div class="section-card-header">
+            <div class="section-title-wrap">
+              <h3 class="section-main-heading">My Drafted Legal Documents</h3>
+              <span class="section-sub-heading">All contracts generated with dual court text and Saral Bhasha explanations</span>
+            </div>
+            <button onclick="switchTab('templates')" class="btn-doc-action primary">
+              + New Contract
+            </button>
+          </div>
+
+          <div class="documents-table-wrapper">
+            <table class="documents-table">
+              <thead>
+                <tr>
+                  <th>Document Name / Hash</th>
+                  <th>Category</th>
+                  <th>Drafted On</th>
+                  <th>Enforceability</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="user-docs-table-body">
+                <!-- Dynamically populated from auth.js / localStorage -->
+              </tbody>
+            </table>
+          </div>
+
+          <div id="empty-docs-placeholder" class="empty-docs-placeholder" style="display:none;">
+            <div class="empty-docs-icon">📁</div>
+            <h4 style="font-size:1.05rem; font-weight:700; color:#334155;">No drafted contracts found yet</h4>
+            <p style="font-size:0.82rem; margin-top:4px;">Generate your first Rent Agreement, Freelance Contract, or NDA in 30 seconds.</p>
+            <button onclick="switchTab('templates')" class="btn-profile-primary" style="margin:1rem auto 0 auto;">
+              Browse Contract Templates →
+            </button>
+          </div>
+        </div>
+
+        <!-- Account Settings & Gemini Key Setup -->
+        <div class="profile-section-card">
+          <div class="section-card-header">
+            <div class="section-title-wrap">
+              <h3 class="section-main-heading">Account & Legal Preferences</h3>
+              <span class="section-sub-heading">Update personal contact details and configure optional Google Gemini API Key</span>
+            </div>
+          </div>
+
+          <form id="profile-settings-form">
+            <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:1rem; margin-bottom:1rem;">
+              <div class="form-group">
+                <label class="form-label" for="settings-name">Full Name</label>
+                <input type="text" id="settings-name" class="form-input" value="Pawan Kumar">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="settings-phone">Mobile Number</label>
+                <input type="tel" id="settings-phone" class="form-input" value="+91 98765 43210">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="settings-city">Primary City / Jurisdiction</label>
+                <input type="text" id="settings-city" class="form-input" value="Bengaluru, Karnataka">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="settings-gemini-key">Custom Gemini AI API Key (Optional)</label>
+                <input type="password" id="settings-gemini-key" class="form-input" placeholder="Paste AI Studio Key for custom live models">
+              </div>
+            </div>
+
+            <button type="submit" class="btn-profile-primary">
+              <span>Save Preferences</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       3. SITE FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top-row">
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <div class="brand-logo-icon" style="width:36px; height:36px; font-size:1.1rem;">⚖️</div>
+          <div>
+            <div style="font-weight:800; color:white; font-size:1.1rem;">KanoonMitra (कानून मित्र)</div>
+            <div style="font-size:0.72rem; color:#94a3b8;">Full-Stack AI Legal Documentation for Bharat 🇮🇳</div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:1rem; align-items:center;">
+          <button id="footer-pitch-btn" class="btn-header-pitch" style="background:#1e293b; color:#f8fafc; border-color:#334155;">
+            <span>🎯</span> <span>Hackathon Pitch Deck</span>
+          </button>
+          <a href="#templates" style="color:#cbd5e1; font-size:0.82rem; text-decoration:none;">Templates</a>
+          <a href="#audit" style="color:#cbd5e1; font-size:0.82rem; text-decoration:none;">Risk Auditor</a>
+          <a href="#stamp" style="color:#cbd5e1; font-size:0.82rem; text-decoration:none;">Stamp Duty</a>
+          <a href="#login" style="color:#fde68a; font-size:0.82rem; text-decoration:none; font-weight:700;">User Login</a>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer-box">
+        <strong>Statutory Legal Disclaimer:</strong> KanoonMitra is an artificial intelligence driven documentation and informational technology platform. It generates standardized agreements compliant with the Indian Contract Act 1872 and assists users in understanding contractual terms through plain Hindi and English explainers. KanoonMitra is not a law firm and does not solicit legal representation under the Advocates Act, 1961. For complex commercial disputes or court representation, users are encouraged to connect with verified Bar Council advocates via our Advocate Escalation Portal.
+      </div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.74rem; color:#64748b; flex-wrap:wrap; gap:0.5rem;">
+        <div>© 2026 KanoonMitra Bharat. Zero Vite Dependency. Crafted with ❤️ for Indian Citizens, Freelancers & MSMEs.</div>
+        <div>Compliant with Digital Personal Data Protection (DPDP) Act 2023.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       4. MODALS (PITCH DECK, LAWYER CONNECT)
+       ========================================================================= -->
+  
+  <!-- HACKATHON PITCH DECK PRESENTATION MODAL -->
+  <div id="pitch-deck-modal" class="modal-overlay">
+    <div class="modal-content-card" style="max-width: 780px;">
+      <div class="modal-header">
+        <div style="display:flex; align-items:center; gap:0.5rem;">
+          <span style="font-size:1.25rem;">🎯</span>
+          <div>
+            <h3 style="font-size:1.15rem; font-weight:800; color:#0f172a;">KanoonMitra Hackathon Pitch Presentation</h3>
+            <span style="font-size:0.75rem; color:#64748b;">Live In-App Interactive Slide Deck for Judges</span>
+          </div>
+        </div>
+        <button class="modal-close-btn">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        
+        <!-- SLIDE 1: The Problem -->
+        <div class="pitch-slide">
+          <div class="brand-badge" style="margin-bottom:0.5rem;">Slide 1: Problem Statement</div>
+          <h3 style="font-size:1.35rem; font-weight:800; margin-bottom:0.75rem;">The Indian Legal Divide</h3>
+          <p style="font-size:0.88rem; color:#475569; line-height:1.6; margin-bottom:1rem;">
+            Over 90% of individuals and 6.3 crore MSMEs in India operate without formal written contracts due to prohibitive lawyer fees (₹5,000+ per draft), intimidation by archaic English legalese, and lack of stamp duty awareness.
+          </p>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:0.75rem; text-align:center;">
+            <div style="background:#fef2f2; border:1px solid #fecaca; padding:1rem; border-radius:var(--radius-md);">
+              <span style="font-size:1.6rem; font-weight:900; color:#dc2626; display:block;">₹5,000+</span>
+              <span style="font-size:0.75rem; color:#7f1d1d;">Average lawyer fee for a single agreement</span>
+            </div>
+            <div style="background:#fffbeb; border:1px solid #fde68a; padding:1rem; border-radius:var(--radius-md);">
+              <span style="font-size:1.6rem; font-weight:900; color:#b45309; display:block;">90%+</span>
+              <span style="font-size:0.75rem; color:#78350f;">Sign contracts without understanding terms</span>
+            </div>
+            <div style="background:#eff6ff; border:1px solid #bfdbfe; padding:1rem; border-radius:var(--radius-md);">
+              <span style="font-size:1.6rem; font-weight:900; color:#1d4ed8; display:block;">6.3 Crore</span>
+              <span style="font-size:0.75rem; color:#1e3a8a;">MSMEs at risk of delayed payment defaults</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 2: The Solution -->
+        <div class="pitch-slide" style="display:none;">
+          <div class="brand-badge" style="margin-bottom:0.5rem;">Slide 2: Core Solution</div>
+          <h3 style="font-size:1.35rem; font-weight:800; margin-bottom:0.75rem;">AI-Powered Dual-Pane Studio</h3>
+          <p style="font-size:0.88rem; color:#475569; line-height:1.6; margin-bottom:1rem;">
+            KanoonMitra solves this with dual-pane generation: court-enforceable legal draft on the left, and Saral Hindi + 5th-grade plain English clause breakdown on the right.
+          </p>
+          <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:0.75rem;">
+            <div style="background:#f8fafc; border:1px solid var(--border); padding:0.85rem; border-radius:var(--radius-md);">
+              <strong style="color:var(--primary); font-size:0.85rem;">✨ Dual-Pane Studio</strong>
+              <p style="font-size:0.78rem; color:#64748b; margin-top:2px;">Signers understand every covenant in Saral Hindi before putting ink to paper.</p>
+            </div>
+            <div style="background:#f8fafc; border:1px solid var(--border); padding:0.85rem; border-radius:var(--radius-md);">
+              <strong style="color:#059669; font-size:0.85rem;">🛡️ AI Red-Flag Auditor</strong>
+              <p style="font-size:0.78rem; color:#64748b; margin-top:2px;">Scans contracts to detect void non-competes and uncapped indemnities.</p>
+            </div>
+            <div style="background:#f8fafc; border:1px solid var(--border); padding:0.85rem; border-radius:var(--radius-md);">
+              <strong style="color:#d97706; font-size:0.85rem;">🏛️ State Stamp Duty Portals</strong>
+              <p style="font-size:0.78rem; color:#64748b; margin-top:2px;">Direct integration guidance for GRAS (MH), SHCIL (Delhi), and Kaveri (KA).</p>
+            </div>
+            <div style="background:#f8fafc; border:1px solid var(--border); padding:0.85rem; border-radius:var(--radius-md);">
+              <strong style="color:#7c3aed; font-size:0.85rem;">👤 Role-Based Profiles</strong>
+              <p style="font-size:0.78rem; color:#64748b; margin-top:2px;">Dedicated dashboard for Citizens, Freelancers, MSMEs, and Advocates.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 3: Architecture -->
+        <div class="pitch-slide" style="display:none;">
+          <div class="brand-badge" style="margin-bottom:0.5rem;">Slide 3: Technical Architecture</div>
+          <h3 style="font-size:1.35rem; font-weight:800; margin-bottom:0.75rem;">Full-Stack Node/Express & Pure Web</h3>
+          <p style="font-size:0.88rem; color:#475569; line-height:1.6; margin-bottom:1rem;">
+            Designed for 100% zero-build simplicity: pure Vanilla JS, rich CSS design system, and Node.js Express server with local JSON store. No complex bundling tools required.
+          </p>
+          <div style="background:#0f172a; color:#f8fafc; padding:1rem; border-radius:var(--radius-md); font-family:var(--font-mono); font-size:0.76rem; line-height:1.6;">
+            • Client: HTML5 + Vanilla CSS + Modular JS (Zero Vite / 1-Command)<br>
+            • Backend: Node.js + Express REST API (CORS, Helmet, Morgan)<br>
+            • AI Engine: Google Gemini 1.5/2.0 API + Procedural Fallback Engine<br>
+            • Persistence: Local JSON Database Store (Users, Documents, Audits)<br>
+            • Privacy: DPDP Act 2023 Aligned + SHA-256 Document Verification Hash
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-header" style="border-top:1px solid var(--border); border-bottom:none; justify-content:space-between;">
+        <span id="slide-counter-disp" style="font-size:0.8rem; font-weight:700; color:#64748b;">1 / 3</span>
+        <div style="display:flex; gap:0.5rem;">
+          <button id="pitch-prev-btn" class="btn-profile-outline">← Previous</button>
+          <button id="pitch-next-btn" class="btn-profile-primary">Next Slide →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LAWYER REVIEW MODAL -->
+  <div id="lawyer-modal" class="modal-overlay">
+    <div class="modal-content-card" style="max-width:540px;">
+      <div class="modal-header">
+        <div>
+          <h3 style="font-size:1.15rem; font-weight:800; color:#0f172a;">Connect with Bar Council Verified Advocate</h3>
+          <span style="font-size:0.75rem; color:#64748b;">1-Click Review for Complex Contract Negotiation</span>
+        </div>
+        <button class="modal-close-btn">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <form id="lawyer-consult-form">
+          <div class="form-group">
+            <label class="form-label" for="lawyer-email">Your Contact Email:</label>
+            <input type="email" id="lawyer-email" class="form-input" placeholder="name@domain.in" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lawyer-phone">Your Mobile (+91 WhatsApp):</label>
+            <input type="tel" id="lawyer-phone" class="form-input" placeholder="+91 98765 43210" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lawyer-note">Specific Concerns / Legal Questions:</label>
+            <textarea id="lawyer-note" class="form-input" rows="3" placeholder="e.g. Please verify lock-in period penalty and check if notice period is adequate..."></textarea>
+          </div>
+          <button type="submit" class="auth-submit-btn">
+            <span>Submit Consultation Request ⚖️</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATIONS CONTAINER -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- =========================================================================
+       5. JAVASCRIPT BUNDLE (ZERO VITE REQUIRED)
+       ========================================================================= -->
+  <script src="/js/templates.js"></script>
+  <script src="/js/legalEngine.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/app.js"></script>
+
+</body>
+</html>

@@ -1,5 +1,121 @@
 {
-  "documents": [],
+  "documents": [
+    {
+      "id": "KM-DOC-1792054315040",
+      "createdAt": "2026-10-15T08:51:55.040Z",
+      "userId": "KM-USER-001",
+      "templateId": "employment-contract",
+      "title": "LEGAL AGREEMENT & MEMORANDUM OF UNDERSTANDING",
+      "hindiTitle": "विधिक अनुबंध एवं समझौता ज्ञापन",
+      "actReference": "Indian Contract Act, 1872",
+      "stampDutyNotice": "To be executed on appropriate Non-Judicial Stamp Paper under the Indian Stamp Act, 1899.",
+      "preamble": "This AGREEMENT is executed on this 15th day of October, 2026 at Hyderabad, India, between First Party and Second Party.",
+      "preamblePlain": "यह कानूनी समझौता 15 अक्टूबर, 2026 को First Party और Second Party के बीच निष्पादित किया गया है।",
+      "recitals": [
+        "WHEREAS the Parties desire to formally record their binding rights, covenants, and mutual undertakings."
+      ],
+      "clauses": [
+        {
+          "id": "c1",
+          "number": "1",
+          "heading": "Covenants & Mutual Obligations",
+          "legalText": "Both Parties agree to fulfill their respective obligations in good faith and in strict compliance with the statutory provisions of Indian Law.",
+          "plainEnglish": "Both parties promise to honestly do their part of the agreed deal.",
+          "plainHindi": "दोनों पक्ष अपनी-अपनी ज़िम्मेदारियों को ईमानदारी से पूरा करेंगे।",
+          "riskLevel": "low",
+          "riskTip": "Good faith performance is mandated under Section 37 of the Indian Contract Act."
+        }
+      ],
+      "execution": {
+        "jurisdiction": "Hyderabad, India",
+        "signingNote": "Signed and delivered in the presence of 2 witnesses."
+      },
+      "savedAt": "2026-10-15T08:51:55.051Z"
+    },
+    {
+      "id": "KM-DOC-1792054315040",
+      "createdAt": "2026-10-15T08:51:55.040Z",
+      "userId": "KM-USER-001",
+      "templateId": "employment-contract",
+      "title": "LEGAL AGREEMENT & MEMORANDUM OF UNDERSTANDING",
+      "hindiTitle": "विधिक अनुबंध एवं समझौता ज्ञापन",
+      "actReference": "Indian Contract Act, 1872",
+      "stampDutyNotice": "To be executed on appropriate Non-Judicial Stamp Paper under the Indian Stamp Act, 1899.",
+      "preamble": "This AGREEMENT is executed on this 15th day of October, 2026 at Hyderabad, India, between First Party and Second Party.",
+      "preamblePlain": "यह कानूनी समझौता 15 अक्टूबर, 2026 को First Party और Second Party के बीच निष्पादित किया गया है।",
+      "recitals": [
+        "WHEREAS the Parties desire to formally record their binding rights, covenants, and mutual undertakings."
+      ],
+      "clauses": [
+        {
+          "id": "c1",
+          "number": "1",
+          "heading": "Covenants & Mutual Obligations",
+          "legalText": "Both Parties agree to fulfill their respective obligations in good faith and in strict compliance with the statutory provisions of Indian Law.",
+          "plainEnglish": "Both parties promise to honestly do their part of the agreed deal.",
+          "plainHindi": "दोनों पक्ष अपनी-अपनी ज़िम्मेदारियों को ईमानदारी से पूरा करेंगे।",
+          "riskLevel": "low",
+          "riskTip": "Good faith performance is mandated under Section 37 of the Indian Contract Act."
+        }
+      ],
+      "execution": {
+        "jurisdiction": "Hyderabad, India",
+        "signingNote": "Signed and delivered in the presence of 2 witnesses."
+      }
+    }
+  ],
   "auditReports": [],
-  "consultations": []
+  "consultations": [],
+  "users": [
+    {
+      "id": "KM-USER-001",
+      "name": "Pawan Kumar",
+      "email": "pawan@kanoonmitra.in",
+      "phone": "+91 98765 43210",
+      "password": "password123",
+      "role": "citizen",
+      "roleTitle": "Citizen / Tenant (नागरिक)",
+      "city": "Bengaluru, Karnataka",
+      "createdAt": "2026-01-15T10:00:00.000Z",
+      "bio": "Looking for verified residential rent agreements and personal affidavits in Bangalore."
+    },
+    {
+      "id": "KM-USER-002",
+      "name": "Ananya Patel",
+      "email": "ananya@creatives.in",
+      "phone": "+91 98220 11223",
+      "password": "password123",
+      "role": "freelancer",
+      "roleTitle": "Freelance UI/UX Designer & Creator (फ्रीलांसर)",
+      "city": "Pune, Maharashtra",
+      "createdAt": "2026-02-10T12:30:00.000Z",
+      "bio": "Independent digital product designer executing cross-border and Indian vendor contracts."
+    },
+    {
+      "id": "KM-USER-003",
+      "name": "Vikram Mehta",
+      "email": "vikram@zentech.in",
+      "phone": "+91 99100 55443",
+      "password": "password123",
+      "role": "msme",
+      "roleTitle": "MSME Business Founder (उद्यमी)",
+      "organization": "ZenTech Innovations Pvt. Ltd.",
+      "city": "Gurugram, Haryana",
+      "createdAt": "2026-03-01T09:15:00.000Z",
+      "bio": "Registered MSME owner relying on Section 16 MSMED Act 45-day payment protections."
+    },
+    {
+      "id": "KM-USER-004",
+      "name": "Advocate Rajesh Sharma",
+      "email": "advocate.sharma@delhibar.in",
+      "phone": "+91 98111 23456",
+      "password": "password123",
+      "role": "lawyer",
+      "roleTitle": "Bar Council of India Verified Advocate (अधिवक्ता)",
+      "barCouncilId": "D/1482/2012",
+      "city": "New Delhi, Delhi",
+      "createdAt": "2025-11-20T08:00:00.000Z",
+      "bio": "Senior contract attorney specializing in ICA 1872 litigation and commercial arbitration."
+    }
+  ]
 }
